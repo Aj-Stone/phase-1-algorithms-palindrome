@@ -1,9 +1,23 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // const noUnd = word.split('').splice(0,9).join('')
+  // console.log(noUnd)
+
+  const lowerCase = word.toLowerCase()
+  console.log(lowerCase)
+
+  const backwards = lowerCase.split('').reverse().join('')
+  console.log(backwards)
+
+  return lowerCase === backwards
 }
 
 /* 
   Add your pseudocode here
+
+  -takes in a string
+  -makes sure its the same forward as it is backwards
+  -returns true if it does
+  -returns false if it isn't
 */
 
 /*
@@ -23,3 +37,5 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
+console.log(isPalindrome('Hannah'))
